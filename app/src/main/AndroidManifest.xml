@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gdg.devfest.passwordmanager"
+    >
+
+  <application
+      android:name=".framework.PasswordManagerApplication"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme"
+      >
+    <activity
+        android:launchMode="singleTop"
+        android:name=".view.PasswordListActivity"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar"
+        >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".view.PasswordCreateActivity"
+        android:label="@string/title_password_create"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:parentActivityName=".view.PasswordListActivity"
+        >
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".view.PasswordListActivity"
+          />
+    </activity>
+    <activity
+        android:launchMode="singleTop"
+        android:name=".view.PasswordReadActivity"
+        android:label="@string/title_password_create"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:parentActivityName=".view.PasswordListActivity"
+        >
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".view.PasswordListActivity"
+          />
+    </activity>
+    <activity
+        android:name=".view.PasswordUpdateActivity"
+        android:label="@string/title_password_create"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:parentActivityName=".view.PasswordReadActivity"
+        >
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".view.PasswordReadActivity"
+          />
+    </activity>
+  </application>
+
+</manifest>
