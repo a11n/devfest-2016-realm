@@ -25,3 +25,6 @@ buildConfigField "String", "REALM", "\"10.0.2.2:9080\""
 ```
 
 ![](gdg-password-manager.png)
+
+##Credits
+[Social media icons](http://www.flaticon.com/packs/social-media-logos-2) designed by [Freepik](http://www.freepik.com) and distributed by [Flaticon](http://www.flaticon.com).
